@@ -44,9 +44,12 @@ np.random.seed(42)
 # 2. PYTORCH MODEL
 # -------------------------------
 
+# 2. PYTORCH MODEL
+
 class DiabetesNet(nn.Module):
     def __init__(self):
         super().__init__()
+
         self.network = nn.Sequential(
             nn.Linear(8, 16),
             nn.ReLU(),
@@ -56,10 +59,6 @@ class DiabetesNet(nn.Module):
 
     def forward(self, x):
         return self.network(x)
-
-
-    def forward(self, x):
-        return self.net(x)
 
 
 # -------------------------------
